@@ -1,0 +1,15 @@
+{
+  "name": "enterprise-itsm-project",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Enterprise IT Helpdesk & Asset Management System (ITSM) - BMSIT&M BEA BCS703B",
+  "scripts": {
+    "start": "node run-app.js",
+    "backend": "cd backend && npm start",
+    "backend:dev": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build"
+  },
+  "author": "Pavan R Bhat, Pracheth Kashyap, Pranab Bhardwaj, Puneethgouda Patil",
+  "license": "ISC"
+}

@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: itsm_mongodb
+    restart: always
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./backend
+    container_name: itsm_backend
+    restart: always
+    ports:
+      - '5001:5001'
+    environment:
+      - PORT=5001
+      - MONGODB_URI=mongodb://mongodb:27017/itsm_db
+      - JWT_SECRET=bmsit_enterprise_itsm_jwt_secret_token_2026
+      - NODE_ENV=production
+      - N8N_WEBHOOK_URL=http://n8n:5678/webhook/itsm-events
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./frontend
+    container_name: itsm_frontend
+    restart: always
+    ports:
+      - '3000:80'
+    depends_on:
+      - backend
+
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: itsm_n8n
+    restart: always
+    ports:
+      - '5678:5678'
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=false
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+volumes:
+  mongo_data:
+  n8n_data:
+

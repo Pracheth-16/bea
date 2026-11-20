@@ -1,0 +1,118 @@
+{
+  "name": "BMSIT ITSM - SLA Breach & Ticket Escalation Flow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "itsm-events",
+        "options": {}
+      },
+      "id": "1",
+      "name": "Webhook: ITSM Event Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.event }}",
+              "value2": "sla_breach"
+            }
+          ]
+        }
+      },
+      "id": "2",
+      "name": "Check If SLA Breached",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "subject": "=🚨 URGENT ITSM SLA Breach: Ticket {{ $json.body.data.ticketId }}",
+        "text": "=Ticket {{ $json.body.data.title }} has breached its SLA threshold and has been escalated to IT Supervisor.\nMessage: {{ $json.body.data.message }}",
+        "toEmail": "supervisor@bmsit.ac.in"
+      },
+      "id": "3",
+      "name": "Send Supervisor Email Alert",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [700, 220]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.event }}",
+              "value2": "asset_request"
+            }
+          ]
+        }
+      },
+      "id": "4",
+      "name": "Check If Asset Request",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [700, 400]
+    },
+    {
+      "parameters": {
+        "subject": "=📦 New Asset Request Awaiting Approval: {{ $json.body.data.requestId }}",
+        "text": "=A new asset procurement/allocation request has been submitted by an employee.\nDetails: {{ $json.body.data.message }}",
+        "toEmail": "admin@bmsit.ac.in"
+      },
+      "id": "5",
+      "name": "Notify Admin Procurement",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [940, 400]
+    }
+  ],
+  "connections": {
+    "Webhook: ITSM Event Trigger": {
+      "main": [
+        [
+          {
+            "node": "Check If SLA Breached",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check If SLA Breached": {
+      "main": [
+        [
+          {
+            "node": "Send Supervisor Email Alert",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Check If Asset Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check If Asset Request": {
+      "main": [
+        [
+          {
+            "node": "Notify Admin Procurement",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
+

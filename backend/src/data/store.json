@@ -1,0 +1,1458 @@
+{
+  "departments": [
+    {
+      "id": "dept-1",
+      "name": "IT Hardware & Facilities",
+      "code": "HW-FAC",
+      "description": "Hardware diagnostics, repairs, and classroom facilities"
+    },
+    {
+      "id": "dept-2",
+      "name": "Enterprise Software Support",
+      "code": "SW-SUP",
+      "description": "ERP, OS, licenses, developer tools and cloud access"
+    },
+    {
+      "id": "dept-3",
+      "name": "Campus Network & Infrastructure",
+      "code": "NET-INF",
+      "description": "Wi-Fi, switches, routers, VPN and firewall management"
+    },
+    {
+      "id": "dept-4",
+      "name": "IT Assets & Procurement",
+      "code": "AST-PRO",
+      "description": "Asset allocation, auditing, procurement and disposal"
+    },
+    {
+      "id": "dept-5",
+      "name": "Information Science & Engineering",
+      "code": "DEPT-ISE",
+      "description": "Academic department of Information Science"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr-admin",
+      "name": "Mrs. Poornima GJ (Admin)",
+      "email": "admin@bmsit.ac.in",
+      "password": "$2a$10$.G9Xepuf3dhI/kOuWXaZl.5KFjq8l5IdNmIIxz1Qxqg8P.ifEGowK",
+      "role": "admin",
+      "department": "IT Assets & Procurement",
+      "phone": "+91 98450 11001",
+      "employeeId": "EMP-ADM-01",
+      "createdAt": "2026-10-17T10:45:26.589Z"
+    },
+    {
+      "id": "usr-supervisor",
+      "name": "Puneethgouda Patil (Supervisor)",
+      "email": "supervisor@bmsit.ac.in",
+      "password": "$2a$10$.G9Xepuf3dhI/kOuWXaZl.5KFjq8l5IdNmIIxz1Qxqg8P.ifEGowK",
+      "role": "supervisor",
+      "department": "IT Hardware & Facilities",
+      "phone": "+91 98450 11002",
+      "employeeId": "EMP-SUP-02",
+      "createdAt": "2026-10-17T10:45:26.589Z"
+    },
+    {
+      "id": "usr-agent-sw",
+      "name": "Pracheth Kashyap (Software Agent)",
+      "email": "agent@bmsit.ac.in",
+      "password": "$2a$10$.G9Xepuf3dhI/kOuWXaZl.5KFjq8l5IdNmIIxz1Qxqg8P.ifEGowK",
+      "role": "agent",
+      "department": "Enterprise Software Support",
+      "phone": "+91 98450 11003",
+      "employeeId": "EMP-AGT-03",
+      "createdAt": "2026-10-17T10:45:26.589Z"
+    },
+    {
+      "id": "usr-agent-hw",
+      "name": "Pranab Bhardwaj (Hardware Agent)",
+      "email": "hardware.agent@bmsit.ac.in",
+      "password": "$2a$10$.G9Xepuf3dhI/kOuWXaZl.5KFjq8l5IdNmIIxz1Qxqg8P.ifEGowK",
+      "role": "agent",
+      "department": "IT Hardware & Facilities",
+      "phone": "+91 98450 11004",
+      "employeeId": "EMP-AGT-04",
+      "createdAt": "2026-10-17T10:45:26.589Z"
+    },
+    {
+      "id": "usr-employee",
+      "name": "Pavan R Bhat (Student/Employee)",
+      "email": "employee@bmsit.ac.in",
+      "password": "$2a$10$.G9Xepuf3dhI/kOuWXaZl.5KFjq8l5IdNmIIxz1Qxqg8P.ifEGowK",
+      "role": "employee",
+      "department": "Information Science & Engineering",
+      "phone": "+91 98450 11005",
+      "employeeId": "1BY23IS145",
+      "createdAt": "2026-10-17T10:45:26.589Z"
+    }
+  ],
+  "assets": [
+    {
+      "id": "ast-101",
+      "assetTag": "BMSIT-LAP-042",
+      "name": "Dell Latitude 5440 i7",
+      "category": "Laptop",
+      "serialNumber": "DL5440-98834-IN",
+      "model": "Latitude 5440 (16GB RAM, 512GB NVMe)",
+      "vendor": "Dell Enterprise Direct",
+      "purchaseDate": "2026-05-20T10:45:26.589Z",
+      "warrantyExpiryDate": "2028-05-09T10:45:26.589Z",
+      "status": "assigned",
+      "assignedToId": "usr-employee",
+      "assignedToName": "Pavan R Bhat",
+      "department": "Information Science & Engineering",
+      "location": "ISE Dept - Lab 3 Workstation 12",
+      "ipAddress": "192.168.10.42",
+      "macAddress": "00:1A:2B:3C:4D:5E",
+      "maintenanceHistory": [
+        {
+          "id": "mnt-1",
+          "date": "2026-10-02T10:45:26.589Z",
+          "serviceType": "RAM Upgrade",
+          "technician": "Pranab Bhardwaj",
+          "notes": "Upgraded from 8GB to 16GB for AI modeling practicals.",
+          "cost": 3500
+        }
+      ],
+      "createdAt": "2026-05-20T10:45:26.589Z"
+    },
+    {
+      "id": "ast-102",
+      "assetTag": "BMSIT-PRJ-015",
+      "name": "Epson EB-2250U 3LCD Projector",
+      "category": "Peripheral",
+      "serialNumber": "EP2250-48291-KA",
+      "model": "EB-2250U Full HD 5000 Lumens",
+      "vendor": "Epson Commercial India",
+      "purchaseDate": "2025-11-21T10:45:26.589Z",
+      "warrantyExpiryDate": "2027-05-15T10:45:26.589Z",
+      "status": "assigned",
+      "assignedToId": "usr-admin",
+      "assignedToName": "Mrs. Poornima GJ",
+      "department": "Information Science & Engineering",
+      "location": "Seminar Hall 204",
+      "maintenanceHistory": [
+        {
+          "id": "mnt-2",
+          "date": "2026-10-27T10:45:26.589Z",
+          "serviceType": "Lamp Replacement & Lens Cleaning",
+          "technician": "Pranab Bhardwaj",
+          "notes": "Replaced projection lamp module after 2500 operating hours.",
+          "cost": 8200
+        }
+      ],
+      "createdAt": "2025-11-21T10:45:26.589Z"
+    },
+    {
+      "id": "ast-103",
+      "assetTag": "BMSIT-SW-008",
+      "name": "Cisco Catalyst 2960-X Gigabit Switch",
+      "category": "Network",
+      "serialNumber": "CS2960X-77123",
+      "model": "WS-C2960X-48FPS-L (48 PoE+ ports)",
+      "vendor": "Cisco Networking Systems",
+      "purchaseDate": "2025-03-26T10:45:26.589Z",
+      "warrantyExpiryDate": "2027-03-16T10:45:26.589Z",
+      "status": "assigned",
+      "assignedToId": "usr-supervisor",
+      "assignedToName": "Puneethgouda Patil",
+      "department": "Campus Network & Infrastructure",
+      "location": "Rack B, Central Server Room",
+      "ipAddress": "192.168.1.10",
+      "maintenanceHistory": [],
+      "createdAt": "2025-03-26T10:45:26.589Z"
+    },
+    {
+      "id": "ast-104",
+      "assetTag": "BMSIT-WS-022",
+      "name": "HP Z4 G4 Workstation (NVIDIA RTX A4000)",
+      "category": "Desktop",
+      "serialNumber": "HPZ4-33291-BLR",
+      "model": "Z4 G4 Xeon W-2245, 64GB DDR4, RTX A4000 16GB",
+      "vendor": "HP Enterprise Store",
+      "purchaseDate": "2026-03-21T10:45:26.589Z",
+      "warrantyExpiryDate": "2028-03-10T10:45:26.589Z",
+      "status": "in_stock",
+      "assignedToId": null,
+      "assignedToName": null,
+      "department": "IT Hardware & Facilities",
+      "location": "Hardware Inventory Room 102",
+      "maintenanceHistory": [],
+      "createdAt": "2026-03-21T10:45:26.589Z"
+    },
+    {
+      "id": "ast-105",
+      "assetTag": "BMSIT-SVR-003",
+      "name": "PowerEdge R750 Rack Server",
+      "category": "Server",
+      "serialNumber": "PER750-99412-SRV",
+      "model": "Dell PowerEdge R750 (2x Intel Xeon Gold, 128GB)",
+      "vendor": "Dell Enterprise Direct",
+      "purchaseDate": "2025-10-12T10:45:26.589Z",
+      "warrantyExpiryDate": "2028-10-16T10:45:26.589Z",
+      "status": "assigned",
+      "assignedToId": "usr-admin",
+      "assignedToName": "System Core Infrastructure",
+      "department": "Campus Network & Infrastructure",
+      "location": "Data Center Rack 01",
+      "ipAddress": "192.168.1.5",
+      "maintenanceHistory": [
+        {
+          "id": "mnt-3",
+          "date": "2026-11-06T10:45:26.589Z",
+          "serviceType": "RAID Controller Firmware Patch",
+          "technician": "Puneethgouda Patil",
+          "notes": "Upgraded PERC H755 firmware to v52.16.1.",
+          "cost": 0
+        }
+      ],
+      "createdAt": "2025-10-12T10:45:26.589Z"
+    },
+    {
+      "id": "ast-106",
+      "assetTag": "BMSIT-LAP-077",
+      "name": "Lenovo ThinkPad E14 Gen 4",
+      "category": "Laptop",
+      "serialNumber": "LNTP-55219-IN",
+      "model": "ThinkPad E14 Ryzen 7 (16GB RAM, 512GB SSD)",
+      "vendor": "Lenovo Commercial",
+      "purchaseDate": "2026-08-18T10:45:26.589Z",
+      "warrantyExpiryDate": "2028-08-17T10:45:26.589Z",
+      "status": "under_maintenance",
+      "assignedToId": null,
+      "assignedToName": null,
+      "department": "IT Hardware & Facilities",
+      "location": "Repair Bench Lab 2",
+      "maintenanceHistory": [
+        {
+          "id": "mnt-4",
+          "date": "2026-11-14T10:45:26.589Z",
+          "serviceType": "Display Backlight Diagnosis",
+          "technician": "Pranab Bhardwaj",
+          "notes": "Flickering panel reported. Awaiting replacement LCD cable from OEM.",
+          "cost": 1800
+        }
+      ],
+      "createdAt": "2026-08-18T10:45:26.589Z"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "tic-1795156815184-771",
+      "createdAt": "2026-11-20T06:40:15.183Z",
+      "ticketNumber": "TKT-2026-007",
+      "title": "core functionality issue",
+      "description": "Users are unable to log in to the application due to an unexpected error message displayed after entering valid credentials",
+      "category": "software",
+      "priority": "routine",
+      "status": "escalated",
+      "department": "Enterprise Software Support",
+      "assignedAgentId": "usr-supervisor",
+      "assignedAgentName": "Puneethgouda Patil (Supervisor) (Supervisor)",
+      "createdById": "usr-employee",
+      "createdByName": "Pavan R Bhat (Student/Employee)",
+      "createdByEmail": "employee@bmsit.ac.in",
+      "relatedAssetId": null,
+      "relatedAssetTag": null,
+      "slaHours": 48,
+      "slaDeadline": "2026-11-22T06:40:15.183Z",
+      "isBreached": false,
+      "isWarning": false,
+      "isEscalated": true,
+      "escalatedAt": "2026-11-20T06:41:33.533Z",
+      "escalatedToSupervisor": true,
+      "resolutionNotes": "",
+      "history": [
+        {
+          "action": "Ticket Raised by Pavan R Bhat (Student/Employee) (employee)",
+          "by": "Pavan R Bhat (Student/Employee)",
+          "timestamp": "2026-11-20T06:40:15.183Z"
+        },
+        {
+          "action": "Auto-routed to department 'Enterprise Software Support' per FR-2 category routing",
+          "by": "System SLA & Routing Engine",
+          "timestamp": "2026-11-20T06:40:15.183Z"
+        },
+        {
+          "action": "Auto-assigned to agent Pracheth Kashyap (Software Agent) (Least-loaded algorithm)",
+          "by": "System SLA & Routing Engine",
+          "timestamp": "2026-11-20T06:40:15.183Z"
+        },
+        {
+          "action": "Manual Escalation Triggered by Pracheth Kashyap (Software Agent). Reason: requires higher level auth ",
+          "by": "Pracheth Kashyap (Software Agent)",
+          "timestamp": "2026-11-20T06:41:33.533Z"
+        }
+      ],
+      "updatedAt": "2026-11-20T06:41:33.533Z"
+    },
+    {
+      "id": "tic-1794827972403-750",
+      "createdAt": "2026-11-16T11:19:32.402Z",
+      "ticketNumber": "TKT-2026-006",
+      "title": "Campus Wi-Fi drops constantly in ISE Lab 2",
+      "description": "Campus Wi-Fi drops constantly in ISE Lab 2",
+      "category": "network",
+      "priority": "urgent",
+      "status": "closed",
+      "department": "Campus Network & Infrastructure",
+      "assignedAgentId": "usr-agent-sw",
+      "assignedAgentName": "Pracheth Kashyap (Software Agent)",
+      "createdById": "usr-employee",
+      "createdByName": "Pavan R Bhat (Student/Employee)",
+      "createdByEmail": "employee@bmsit.ac.in",
+      "relatedAssetId": null,
+      "relatedAssetTag": null,
+      "slaHours": 12,
+      "slaDeadline": "2026-11-16T23:19:32.402Z",
+      "isBreached": true,
+      "isWarning": true,
+      "isEscalated": true,
+      "escalatedAt": "2026-11-20T06:23:57.372Z",
+      "escalatedToSupervisor": true,
+      "resolutionNotes": "resolved\n",
+      "history": [
+        {
+          "action": "Ticket Raised by Pavan R Bhat (Student/Employee) (employee)",
+          "by": "Pavan R Bhat (Student/Employee)",
+          "timestamp": "2026-11-16T11:19:32.402Z"
+        },
+        {
+          "action": "Auto-routed to department 'Campus Network & Infrastructure' per FR-2 category routing",
+          "by": "System SLA & Routing Engine",
+          "timestamp": "2026-11-16T11:19:32.402Z"
+        },
+        {
+          "action": "Auto-assigned to agent Pracheth Kashyap (Software Agent) (Least-loaded algorithm)",
+          "by": "System SLA & Routing Engine",
+          "timestamp": "2026-11-16T11:19:32.402Z"
+        },
+        {
+          "action": "SLA 75% Warning Threshold Reached",
+          "by": "SLA Engine",
+          "timestamp": "2026-11-20T06:23:57.369Z"
+        },
+        {
+          "action": "SLA BREACH DETECTED",
+          "by": "SLA Engine",
+          "timestamp": "2026-11-20T06:23:57.372Z"
+        },
+        {
+          "action": "AUTO-ESCALATED TO SUPERVISOR per FR-6 priority queue policy",
+          "by": "SLA Escalation Engine",
+          "timestamp": "2026-11-20T06:23:57.372Z"
+        },
+        {
+          "by": "Pracheth Kashyap (Software Agent)",
+          "timestamp": "2026-11-20T06:34:38.123Z",
+          "action": "Status transitioned from 'escalated' to 'resolved'. Resolution notes: \"resolved\n\""
+        },
+        {
+          "action": "Reassigned from 'Puneethgouda Patil (Supervisor) (Supervisor)' to 'Pracheth Kashyap (Software Agent)' by Puneethgouda Patil (Supervisor)",
+          "by": "Puneethgouda Patil (Supervisor)",
+          "timestamp": "2026-11-20T06:38:26.334Z"
+        },
+        {
+          "by": "Puneethgouda Patil (Supervisor)",
+          "timestamp": "2026-11-20T06:42:22.390Z",
+          "action": "Status transitioned from 'resolved' to 'closed'. Resolution notes: \"Resolved as per standard IT procedure\""
+        }
+      ],
+      "resolvedAt": "2026-11-20T06:42:22.390Z",
+      "updatedAt": "2026-11-20T06:42:22.390Z"
+    },
+    {
+      "id": "tkt-001",
+      "ticketNumber": "TKT-2026-001",
+      "title": "Lab 3 Dell Workstation failing to boot (Kernel Panic)",
+      "description": "The workstation in ISE Lab 3 halts during boot with a storage I/O read error. Multiple students need this machine for project simulations.",
+      "category": "hardware",
+      "priority": "urgent",
+      "status": "escalated",
+      "department": "IT Hardware & Facilities",
+      "assignedAgentId": "usr-supervisor",
+      "assignedAgentName": "Puneethgouda Patil (Supervisor) (Supervisor)",
+      "createdById": "usr-employee",
+      "createdByName": "Pavan R Bhat",
+      "createdByEmail": "employee@bmsit.ac.in",
+      "relatedAssetId": "ast-101",
+      "relatedAssetTag": "BMSIT-LAP-042",
+      "slaHours": 12,
+      "createdAt": "2026-11-16T05:45:26.589Z",
+      "slaDeadline": "2026-11-16T17:45:26.589Z",
+      "isBreached": true,
+      "isWarning": true,
+      "isEscalated": true,
+      "escalatedAt": "2026-11-20T06:23:57.373Z",
+      "escalatedToSupervisor": true,
+      "resolutionNotes": "",
+      "history": [
+        {
+          "action": "Ticket Created",
+          "by": "Pavan R Bhat",
+          "timestamp": "2026-11-16T05:45:26.589Z"
+        },
+        {
+          "action": "Auto-routed to IT Hardware & Facilities",
+          "by": "System SLA & Routing Engine",
+          "timestamp": "2026-11-16T05:45:26.589Z"
+        },
+        {
+          "action": "Assigned to Pranab Bhardwaj",
+          "by": "System SLA & Routing Engine",
+          "timestamp": "2026-11-16T05:45:26.589Z"
+        },
+        {
+          "action": "SLA 75% Warning Threshold Reached",
+          "by": "SLA Engine",
+          "timestamp": "2026-11-20T06:23:57.372Z"
+        },
+        {
+          "action": "SLA BREACH DETECTED",
+          "by": "SLA Engine",
+          "timestamp": "2026-11-20T06:23:57.373Z"
+        },
+        {
+          "action": "AUTO-ESCALATED TO SUPERVISOR per FR-6 priority queue policy",
+          "by": "SLA Escalation Engine",
+          "timestamp": "2026-11-20T06:23:57.373Z"
+        }
+      ]
+    },
+    {
+      "id": "tkt-002",
+      "ticketNumber": "TKT-2026-002",
+      "title": "CRITICAL: Core Switch Port flap causing campus Wi-Fi outage",
+      "description": "The Cisco Catalyst 2960 switch in Building B is flapping ports 12-24, knocking offline all Wi-Fi access points for the 2nd and 3rd floors.",
+      "category": "network",
+      "priority": "critical",
+      "status": "resolved",
+      "department": "Campus Network & Infrastructure",
+      "assignedAgentId": "usr-supervisor",
+      "assignedAgentName": "Puneethgouda Patil (Supervisor)",
+      "createdById": "usr-employee",
+      "createdByName": "Pavan R Bhat",
+      "createdByEmail": "employee@bmsit.ac.in",
+      "relatedAssetId": "ast-103",
+      "relatedAssetTag": "BMSIT-SW-008",
+      "slaHours": 4,
+      "createdAt": "2026-11-16T05:15:26.589Z",
+      "slaDeadline": "2026-11-16T09:15:26.589Z",
+      "isBreached": true,
+      "isWarning": true,
+      "isEscalated": true,
+      "escalatedAt": "2026-11-16T09:15:26.589Z",
+      "escalatedToSupervisor": true,
+      "resolutionNotes": "resolved the core switch port issue\n",
+      "history": [
+        {
+          "action": "Ticket Created with CRITICAL priority",
+          "by": "Pavan R Bhat",
+          "timestamp": "2026-11-16T05:15:26.589Z"
+        },
+        {
+          "action": "Auto-assigned to Campus Network & Infrastructure",
+          "by": "System Routing Engine",
+          "timestamp": "2026-11-16T05:15:26.589Z"
+        },
+        {
+          "action": "SLA 75% Warning Threshold Reached (1 hr remaining)",
+          "by": "SLA Engine",
+          "timestamp": "2026-11-16T08:15:26.589Z"
+        },
+        {
+          "action": "SLA BREACH DETECTED (Exceeded 4.0 hrs)",
+          "by": "SLA Engine",
+          "timestamp": "2026-11-16T09:15:26.589Z"
+        },
+        {
+          "action": "AUTO-ESCALATED TO SUPERVISOR & Re-prioritized to Top of Queue (FR-6)",
+          "by": "SLA Escalation Engine",
+          "timestamp": "2026-11-16T09:15:26.589Z"
+        },
+        {
+          "by": "Pracheth Kashyap (Software Agent)",
+          "timestamp": "2026-11-20T06:33:31.888Z",
+          "action": "Status transitioned from 'escalated' to 'resolved'. Resolution notes: \"resolved the core switch port issue\n\""
+        }
+      ],
+      "resolvedAt": "2026-11-20T06:33:31.888Z",
+      "updatedAt": "2026-11-20T06:33:31.889Z"
+    },
+    {
+      "id": "tkt-003",
+      "ticketNumber": "TKT-2026-003",
+      "title": "Request MATLAB & JetBrains Enterprise License activation",
+      "description": "Need activation keys for MATLAB Deep Learning Toolbox and IntelliJ IDEA Ultimate for the BCS703B course laboratory assignments.",
+      "category": "software",
+      "priority": "routine",
+      "status": "escalated",
+      "department": "Enterprise Software Support",
+      "assignedAgentId": "usr-supervisor",
+      "assignedAgentName": "Puneethgouda Patil (Supervisor) (Supervisor)",
+      "createdById": "usr-employee",
+      "createdByName": "Pavan R Bhat",
+      "createdByEmail": "employee@bmsit.ac.in",
+      "relatedAssetId": null,
+      "relatedAssetTag": null,
+      "slaHours": 48,
+      "createdAt": "2026-11-15T22:45:26.589Z",
+      "slaDeadline": "2026-11-17T22:45:26.589Z",
+      "isBreached": true,
+      "isWarning": true,
+      "isEscalated": true,
+      "escalatedAt": "2026-11-20T06:23:57.374Z",
+      "escalatedToSupervisor": true,
+      "resolutionNotes": "",
+      "history": [
+        {
+          "action": "Ticket Created",
+          "by": "Pavan R Bhat",
+          "timestamp": "2026-11-15T22:45:26.589Z"
+        },
+        {
+          "action": "Auto-routed to Enterprise Software Support",
+          "by": "System Routing Engine",
+          "timestamp": "2026-11-15T22:45:26.589Z"
+        },
+        {
+          "action": "Assigned to Pracheth Kashyap",
+          "by": "System Routing Engine",
+          "timestamp": "2026-11-15T22:45:26.589Z"
+        },
+        {
+          "action": "SLA 75% Warning Threshold Reached",
+          "by": "SLA Engine",
+          "timestamp": "2026-11-20T06:23:57.373Z"
+        },
+        {
+          "action": "SLA BREACH DETECTED",
+          "by": "SLA Engine",
+          "timestamp": "2026-11-20T06:23:57.373Z"
+        },
+        {
+          "action": "AUTO-ESCALATED TO SUPERVISOR per FR-6 priority queue policy",
+          "by": "SLA Escalation Engine",
+          "timestamp": "2026-11-20T06:23:57.374Z"
+        }
+      ]
+    },
+    {
+      "id": "tkt-004",
+      "ticketNumber": "TKT-2026-004",
+      "title": "Seminar Hall 204 Projector HDMI handshake failure",
+      "description": "Epson Projector displays \"No Signal\" intermittent sync over HDMI wall plate when presenting from student laptops.",
+      "category": "hardware",
+      "priority": "urgent",
+      "status": "resolved",
+      "department": "IT Hardware & Facilities",
+      "assignedAgentId": "usr-agent-hw",
+      "assignedAgentName": "Pranab Bhardwaj",
+      "createdById": "usr-admin",
+      "createdByName": "Mrs. Poornima GJ",
+      "createdByEmail": "admin@bmsit.ac.in",
+      "relatedAssetId": "ast-102",
+      "relatedAssetTag": "BMSIT-PRJ-015",
+      "slaHours": 12,
+      "createdAt": "2026-11-14T10:45:26.589Z",
+      "slaDeadline": "2026-11-14T22:45:26.589Z",
+      "isBreached": false,
+      "isWarning": false,
+      "isEscalated": false,
+      "escalatedAt": null,
+      "escalatedToSupervisor": false,
+      "resolvedAt": "2026-11-14T17:57:26.589Z",
+      "resolutionNotes": "Replaced faulty 15m high-speed HDMI patch cable inside podium cable conduit. Tested with 3 different laptops at 1080p 60Hz. Resolution verified.",
+      "history": [
+        {
+          "action": "Ticket Created",
+          "by": "Mrs. Poornima GJ",
+          "timestamp": "2026-11-14T10:45:26.589Z"
+        },
+        {
+          "action": "Assigned to Pranab Bhardwaj",
+          "by": "System Routing Engine",
+          "timestamp": "2026-11-14T10:45:26.589Z"
+        },
+        {
+          "action": "Status changed to In Progress",
+          "by": "Pranab Bhardwaj",
+          "timestamp": "2026-11-14T13:09:26.589Z"
+        },
+        {
+          "action": "Ticket Resolved within SLA (Duration: 7.2 hrs)",
+          "by": "Pranab Bhardwaj",
+          "timestamp": "2026-11-14T17:57:26.589Z"
+        }
+      ]
+    },
+    {
+      "id": "tkt-005",
+      "ticketNumber": "TKT-2026-005",
+      "title": "New Asset Request: High-RAM Workstation for AI Capstone",
+      "description": "Requesting allocation of an HP Z4 Workstation or high-memory desktop to run large language model fine-tuning experiments for department project.",
+      "category": "new_asset",
+      "priority": "routine",
+      "status": "escalated",
+      "department": "IT Assets & Procurement",
+      "assignedAgentId": "usr-supervisor",
+      "assignedAgentName": "Puneethgouda Patil (Supervisor)",
+      "createdById": "usr-employee",
+      "createdByName": "Pavan R Bhat",
+      "createdByEmail": "employee@bmsit.ac.in",
+      "relatedAssetId": "ast-104",
+      "relatedAssetTag": "BMSIT-WS-022",
+      "slaHours": 48,
+      "createdAt": "2026-11-16T08:45:26.589Z",
+      "slaDeadline": "2026-11-18T08:45:26.589Z",
+      "isBreached": true,
+      "isWarning": true,
+      "isEscalated": true,
+      "escalatedAt": "2026-11-20T06:23:57.374Z",
+      "escalatedToSupervisor": true,
+      "resolutionNotes": "",
+      "history": [
+        {
+          "action": "Asset Service Request Submitted",
+          "by": "Pavan R Bhat",
+          "timestamp": "2026-11-16T08:45:26.589Z"
+        },
+        {
+          "action": "Auto-routed to IT Assets & Procurement",
+          "by": "System Routing Engine",
+          "timestamp": "2026-11-16T08:45:26.589Z"
+        },
+        {
+          "action": "SLA 75% Warning Threshold Reached",
+          "by": "SLA Engine",
+          "timestamp": "2026-11-20T06:23:57.374Z"
+        },
+        {
+          "action": "SLA BREACH DETECTED",
+          "by": "SLA Engine",
+          "timestamp": "2026-11-20T06:23:57.374Z"
+        },
+        {
+          "action": "AUTO-ESCALATED TO SUPERVISOR per FR-6 priority queue policy",
+          "by": "SLA Escalation Engine",
+          "timestamp": "2026-11-20T06:23:57.374Z"
+        },
+        {
+          "action": "Reassigned from 'Puneethgouda Patil (Supervisor) (Supervisor)' to 'Puneethgouda Patil (Supervisor)' by Puneethgouda Patil (Supervisor)",
+          "by": "Puneethgouda Patil (Supervisor)",
+          "timestamp": "2026-11-20T06:38:42.561Z"
+        }
+      ],
+      "updatedAt": "2026-11-20T06:38:42.561Z"
+    }
+  ],
+  "assetRequests": [
+    {
+      "id": "req-001",
+      "requestNumber": "REQ-2026-001",
+      "requestedById": "usr-employee",
+      "requestedByName": "Pavan R Bhat",
+      "department": "Information Science & Engineering",
+      "assetType": "Desktop Workstation",
+      "priority": "critical",
+      "justification": "Required for running local GPU training clusters for autonomous agent research and BEA mini-project evaluation.",
+      "status": "pending",
+      "reviewedById": null,
+      "reviewedByName": null,
+      "reviewedAt": null,
+      "reviewNotes": "",
+      "allocatedAssetId": null,
+      "createdAt": "2026-11-16T04:45:26.589Z"
+    },
+    {
+      "id": "req-002",
+      "requestNumber": "REQ-2026-002",
+      "requestedById": "usr-agent-sw",
+      "requestedByName": "Pracheth Kashyap",
+      "department": "Enterprise Software Support",
+      "assetType": "External 4K Monitor",
+      "priority": "routine",
+      "justification": "Multi-screen setup required for monitoring ITSM microservices logs and concurrent debug sessions.",
+      "status": "approved",
+      "reviewedById": "usr-admin",
+      "reviewedByName": "Mrs. Poornima GJ",
+      "reviewedAt": "2026-11-15T10:45:26.589Z",
+      "reviewNotes": "Approved. Dispatched Dell 27-inch 4K monitor from central store.",
+      "allocatedAssetId": "ast-104",
+      "createdAt": "2026-11-13T10:45:26.589Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "not-1795156942392-335",
+      "createdAt": "2026-11-20T06:42:22.392Z",
+      "userId": "usr-employee",
+      "type": "ticket_update",
+      "title": "Ticket TKT-2026-006 Status: CLOSED",
+      "message": "Puneethgouda Patil (Supervisor) updated your ticket. Resolution remarks: None",
+      "ticketId": "tic-1794827972403-750",
+      "requestId": null,
+      "read": false
+    },
+    {
+      "id": "not-1795156893534-90",
+      "createdAt": "2026-11-20T06:41:33.534Z",
+      "userId": "usr-supervisor",
+      "type": "sla_escalation",
+      "title": "🚨 Escalation Override: TKT-2026-007",
+      "message": "Pracheth Kashyap (Software Agent) escalated ticket \"core functionality issue\". Reason: requires higher level auth ",
+      "ticketId": "tic-1795156815184-771",
+      "requestId": null,
+      "read": false
+    },
+    {
+      "id": "not-1795156815188-774",
+      "createdAt": "2026-11-20T06:40:15.188Z",
+      "userId": "usr-agent-sw",
+      "type": "ticket_assigned",
+      "title": "New Ticket Assigned: TKT-2026-007",
+      "message": "Pavan R Bhat (Student/Employee) raised ticket \"core functionality issue\" under Enterprise Software Support",
+      "ticketId": "tic-1795156815184-771",
+      "requestId": null,
+      "read": false
+    },
+    {
+      "id": "not-1795156722564-843",
+      "createdAt": "2026-11-20T06:38:42.564Z",
+      "userId": "usr-supervisor",
+      "type": "ticket_assigned",
+      "title": "Ticket Reassigned to You: TKT-2026-005",
+      "message": "Puneethgouda Patil (Supervisor) reassigned \"New Asset Request: High-RAM Workstation for AI Capstone\" to you.",
+      "ticketId": "tkt-005",
+      "requestId": null,
+      "read": false
+    },
+    {
+      "id": "not-1795156706336-512",
+      "createdAt": "2026-11-20T06:38:26.336Z",
+      "userId": "usr-agent-sw",
+      "type": "ticket_assigned",
+      "title": "Ticket Reassigned to You: TKT-2026-006",
+      "message": "Puneethgouda Patil (Supervisor) reassigned \"Campus Wi-Fi drops constantly in ISE Lab 2\" to you.",
+      "ticketId": "tic-1794827972403-750",
+      "requestId": null,
+      "read": false
+    },
+    {
+      "id": "not-1795156478125-655",
+      "createdAt": "2026-11-20T06:34:38.125Z",
+      "userId": "usr-employee",
+      "type": "ticket_update",
+      "title": "Ticket TKT-2026-006 Status: RESOLVED",
+      "message": "Pracheth Kashyap (Software Agent) updated your ticket. Resolution remarks: resolved\n",
+      "ticketId": "tic-1794827972403-750",
+      "requestId": null,
+      "read": false
+    },
+    {
+      "id": "not-1795156411891-979",
+      "createdAt": "2026-11-20T06:33:31.891Z",
+      "userId": "usr-employee",
+      "type": "ticket_update",
+      "title": "Ticket TKT-2026-002 Status: RESOLVED",
+      "message": "Pracheth Kashyap (Software Agent) updated your ticket. Resolution remarks: resolved the core switch port issue\n",
+      "ticketId": "tkt-002",
+      "requestId": null,
+      "read": false
+    },
+    {
+      "id": "not-1795155837374-424",
+      "createdAt": "2026-11-20T06:23:57.374Z",
+      "userId": "usr-supervisor",
+      "type": "sla_escalation",
+      "title": "🚨 CRITICAL Escalation: TKT-2026-005",
+      "message": "Ticket TKT-2026-005 (New Asset Request: High-RAM Workstation for AI Capstone) was auto-escalated to you due to SLA breach.",
+      "ticketId": "tkt-005",
+      "read": false
+    },
+    {
+      "id": "not-1795155837374-116",
+      "createdAt": "2026-11-20T06:23:57.374Z",
+      "userId": "usr-admin",
+      "type": "sla_breach",
+      "title": "🚨 SLA Breached: TKT-2026-005",
+      "message": "Your assigned ticket TKT-2026-005 has breached SLA deadline.",
+      "ticketId": "tkt-005",
+      "read": false
+    },
+    {
+      "id": "not-1795155837374-653",
+      "createdAt": "2026-11-20T06:23:57.374Z",
+      "userId": "usr-admin",
+      "type": "sla_warning",
+      "title": "⚠️ SLA Warning: TKT-2026-005",
+      "message": "Ticket TKT-2026-005 has reached 75% of its SLA threshold (48h)",
+      "ticketId": "tkt-005",
+      "read": false
+    },
+    {
+      "id": "not-1795155837374-637",
+      "createdAt": "2026-11-20T06:23:57.374Z",
+      "userId": "usr-supervisor",
+      "type": "sla_escalation",
+      "title": "🚨 CRITICAL Escalation: TKT-2026-003",
+      "message": "Ticket TKT-2026-003 (Request MATLAB & JetBrains Enterprise License activation) was auto-escalated to you due to SLA breach.",
+      "ticketId": "tkt-003",
+      "read": false
+    },
+    {
+      "id": "not-1795155837373-590",
+      "createdAt": "2026-11-20T06:23:57.373Z",
+      "userId": "usr-agent-sw",
+      "type": "sla_breach",
+      "title": "🚨 SLA Breached: TKT-2026-003",
+      "message": "Your assigned ticket TKT-2026-003 has breached SLA deadline.",
+      "ticketId": "tkt-003",
+      "read": false
+    },
+    {
+      "id": "not-1795155837373-865",
+      "createdAt": "2026-11-20T06:23:57.373Z",
+      "userId": "usr-agent-sw",
+      "type": "sla_warning",
+      "title": "⚠️ SLA Warning: TKT-2026-003",
+      "message": "Ticket TKT-2026-003 has reached 75% of its SLA threshold (48h)",
+      "ticketId": "tkt-003",
+      "read": false
+    },
+    {
+      "id": "not-1795155837373-523",
+      "createdAt": "2026-11-20T06:23:57.373Z",
+      "userId": "usr-supervisor",
+      "type": "sla_escalation",
+      "title": "🚨 CRITICAL Escalation: TKT-2026-001",
+      "message": "Ticket TKT-2026-001 (Lab 3 Dell Workstation failing to boot (Kernel Panic)) was auto-escalated to you due to SLA breach.",
+      "ticketId": "tkt-001",
+      "read": false
+    },
+    {
+      "id": "not-1795155837373-238",
+      "createdAt": "2026-11-20T06:23:57.373Z",
+      "userId": "usr-agent-hw",
+      "type": "sla_breach",
+      "title": "🚨 SLA Breached: TKT-2026-001",
+      "message": "Your assigned ticket TKT-2026-001 has breached SLA deadline.",
+      "ticketId": "tkt-001",
+      "read": false
+    },
+    {
+      "id": "not-1795155837372-661",
+      "createdAt": "2026-11-20T06:23:57.372Z",
+      "userId": "usr-agent-hw",
+      "type": "sla_warning",
+      "title": "⚠️ SLA Warning: TKT-2026-001",
+      "message": "Ticket TKT-2026-001 has reached 75% of its SLA threshold (12h)",
+      "ticketId": "tkt-001",
+      "read": false
+    },
+    {
+      "id": "not-1795155837372-767",
+      "createdAt": "2026-11-20T06:23:57.372Z",
+      "userId": "usr-supervisor",
+      "type": "sla_escalation",
+      "title": "🚨 CRITICAL Escalation: TKT-2026-006",
+      "message": "Ticket TKT-2026-006 (Campus Wi-Fi drops constantly in ISE Lab 2) was auto-escalated to you due to SLA breach.",
+      "ticketId": "tic-1794827972403-750",
+      "read": false
+    },
+    {
+      "id": "not-1795155837372-55",
+      "createdAt": "2026-11-20T06:23:57.372Z",
+      "userId": "usr-agent-sw",
+      "type": "sla_breach",
+      "title": "🚨 SLA Breached: TKT-2026-006",
+      "message": "Your assigned ticket TKT-2026-006 has breached SLA deadline.",
+      "ticketId": "tic-1794827972403-750",
+      "read": false
+    },
+    {
+      "id": "not-1795155837370-969",
+      "createdAt": "2026-11-20T06:23:57.370Z",
+      "userId": "usr-agent-sw",
+      "type": "sla_warning",
+      "title": "⚠️ SLA Warning: TKT-2026-006",
+      "message": "Ticket TKT-2026-006 has reached 75% of its SLA threshold (12h)",
+      "ticketId": "tic-1794827972403-750",
+      "read": false
+    },
+    {
+      "id": "not-1794827972406-157",
+      "createdAt": "2026-11-16T11:19:32.406Z",
+      "userId": "usr-agent-sw",
+      "type": "ticket_assigned",
+      "title": "New Ticket Assigned: TKT-2026-006",
+      "message": "Pavan R Bhat (Student/Employee) raised ticket \"Campus Wi-Fi drops constantly in ISE Lab 2\" under Campus Network & Infrastructure",
+      "ticketId": "tic-1794827972403-750",
+      "requestId": null,
+      "read": false
+    },
+    {
+      "id": "notif-1",
+      "userId": "usr-supervisor",
+      "type": "sla_breach",
+      "title": "🚨 SLA Breach Alert: TKT-2026-002 Escalated",
+      "message": "Critical Ticket TKT-2026-002 (Campus Wi-Fi Outage) has exceeded its 4-hour SLA threshold and has been escalated to you.",
+      "ticketId": "tkt-002",
+      "read": false,
+      "createdAt": "2026-11-16T09:15:26.589Z"
+    },
+    {
+      "id": "notif-2",
+      "userId": "usr-agent-hw",
+      "type": "ticket_assigned",
+      "title": "New Ticket Auto-Assigned: TKT-2026-001",
+      "message": "Urgent ticket for Lab 3 Dell Workstation failing to boot has been auto-assigned to you per category rules.",
+      "ticketId": "tkt-001",
+      "read": true,
+      "createdAt": "2026-11-16T05:45:26.589Z"
+    },
+    {
+      "id": "notif-3",
+      "userId": "usr-employee",
+      "type": "ticket_update",
+      "title": "Ticket TKT-2026-004 Resolved",
+      "message": "Your ticket regarding Seminar Hall Projector HDMI has been resolved by Pranab Bhardwaj.",
+      "ticketId": "tkt-004",
+      "read": true,
+      "createdAt": "2026-11-14T17:57:26.589Z"
+    },
+    {
+      "id": "notif-4",
+      "userId": "usr-admin",
+      "type": "asset_request",
+      "title": "New Critical Asset Request REQ-2026-001",
+      "message": "Pavan R Bhat submitted a Critical Priority request for a Desktop Workstation requiring your review.",
+      "requestId": "req-001",
+      "read": false,
+      "createdAt": "2026-11-16T04:45:26.589Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud-1795156942393-70",
+      "createdAt": "2026-11-20T06:42:22.393Z",
+      "action": "N8N_WEBHOOK_EMITTED",
+      "userId": "system",
+      "userName": "n8n Workflow Bridge",
+      "details": "Event [ticket_update] prepared for n8n orchestrator",
+      "payload": {
+        "event": "ticket_update",
+        "timestamp": "2026-11-20T06:42:22.393Z",
+        "data": {
+          "userId": "usr-employee",
+          "title": "Ticket TKT-2026-006 Status: CLOSED",
+          "message": "Puneethgouda Patil (Supervisor) updated your ticket. Resolution remarks: None",
+          "ticketId": "tic-1794827972403-750",
+          "requestId": null
+        }
+      }
+    },
+    {
+      "id": "aud-1795156942391-965",
+      "createdAt": "2026-11-20T06:42:22.391Z",
+      "action": "TICKET_UPDATED",
+      "userId": "usr-supervisor",
+      "userName": "Puneethgouda Patil (Supervisor)",
+      "details": "Updated ticket TKT-2026-006 to status 'closed'",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-11-20T06:42:22.391Z"
+    },
+    {
+      "id": "aud-1795156924186-673",
+      "createdAt": "2026-11-20T06:42:04.186Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-supervisor",
+      "userName": "Puneethgouda Patil (Supervisor)",
+      "details": "User logged in with role supervisor",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:42:04.186Z"
+    },
+    {
+      "id": "aud-1795156913551-328",
+      "createdAt": "2026-11-20T06:41:53.551Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-admin",
+      "userName": "Mrs. Poornima GJ (Admin)",
+      "details": "User logged in with role admin",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:41:53.551Z"
+    },
+    {
+      "id": "aud-1795156906053-677",
+      "createdAt": "2026-11-20T06:41:46.053Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-supervisor",
+      "userName": "Puneethgouda Patil (Supervisor)",
+      "details": "User logged in with role supervisor",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:41:46.053Z"
+    },
+    {
+      "id": "aud-1795156893535-551",
+      "createdAt": "2026-11-20T06:41:33.535Z",
+      "action": "N8N_WEBHOOK_EMITTED",
+      "userId": "system",
+      "userName": "n8n Workflow Bridge",
+      "details": "Event [sla_escalation] prepared for n8n orchestrator",
+      "payload": {
+        "event": "sla_escalation",
+        "timestamp": "2026-11-20T06:41:33.535Z",
+        "data": {
+          "userId": "usr-supervisor",
+          "title": "🚨 Escalation Override: TKT-2026-007",
+          "message": "Pracheth Kashyap (Software Agent) escalated ticket \"core functionality issue\". Reason: requires higher level auth ",
+          "ticketId": "tic-1795156815184-771",
+          "requestId": null
+        }
+      }
+    },
+    {
+      "id": "aud-1795156849637-502",
+      "createdAt": "2026-11-20T06:40:49.637Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-agent-sw",
+      "userName": "Pracheth Kashyap (Software Agent)",
+      "details": "User logged in with role agent",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:40:49.637Z"
+    },
+    {
+      "id": "aud-1795156815192-225",
+      "createdAt": "2026-11-20T06:40:15.192Z",
+      "action": "N8N_WEBHOOK_EMITTED",
+      "userId": "system",
+      "userName": "n8n Workflow Bridge",
+      "details": "Event [ticket_assigned] prepared for n8n orchestrator",
+      "payload": {
+        "event": "ticket_assigned",
+        "timestamp": "2026-11-20T06:40:15.192Z",
+        "data": {
+          "userId": "usr-agent-sw",
+          "title": "New Ticket Assigned: TKT-2026-007",
+          "message": "Pavan R Bhat (Student/Employee) raised ticket \"core functionality issue\" under Enterprise Software Support",
+          "ticketId": "tic-1795156815184-771",
+          "requestId": null
+        }
+      }
+    },
+    {
+      "id": "aud-1795156815188-408",
+      "createdAt": "2026-11-20T06:40:15.188Z",
+      "action": "TICKET_CREATED",
+      "userId": "usr-employee",
+      "userName": "Pavan R Bhat (Student/Employee)",
+      "details": "Created ticket TKT-2026-007 [ROUTINE]",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-11-20T06:40:15.187Z"
+    },
+    {
+      "id": "aud-1795156738765-95",
+      "createdAt": "2026-11-20T06:38:58.765Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-employee",
+      "userName": "Pavan R Bhat (Student/Employee)",
+      "details": "User logged in with role employee",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:38:58.765Z"
+    },
+    {
+      "id": "aud-1795156731967-728",
+      "createdAt": "2026-11-20T06:38:51.967Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-agent-sw",
+      "userName": "Pracheth Kashyap (Software Agent)",
+      "details": "User logged in with role agent",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:38:51.967Z"
+    },
+    {
+      "id": "aud-1795156722565-797",
+      "createdAt": "2026-11-20T06:38:42.565Z",
+      "action": "N8N_WEBHOOK_EMITTED",
+      "userId": "system",
+      "userName": "n8n Workflow Bridge",
+      "details": "Event [ticket_assigned] prepared for n8n orchestrator",
+      "payload": {
+        "event": "ticket_assigned",
+        "timestamp": "2026-11-20T06:38:42.565Z",
+        "data": {
+          "userId": "usr-supervisor",
+          "title": "Ticket Reassigned to You: TKT-2026-005",
+          "message": "Puneethgouda Patil (Supervisor) reassigned \"New Asset Request: High-RAM Workstation for AI Capstone\" to you.",
+          "ticketId": "tkt-005",
+          "requestId": null
+        }
+      }
+    },
+    {
+      "id": "aud-1795156706337-232",
+      "createdAt": "2026-11-20T06:38:26.337Z",
+      "action": "N8N_WEBHOOK_EMITTED",
+      "userId": "system",
+      "userName": "n8n Workflow Bridge",
+      "details": "Event [ticket_assigned] prepared for n8n orchestrator",
+      "payload": {
+        "event": "ticket_assigned",
+        "timestamp": "2026-11-20T06:38:26.337Z",
+        "data": {
+          "userId": "usr-agent-sw",
+          "title": "Ticket Reassigned to You: TKT-2026-006",
+          "message": "Puneethgouda Patil (Supervisor) reassigned \"Campus Wi-Fi drops constantly in ISE Lab 2\" to you.",
+          "ticketId": "tic-1794827972403-750",
+          "requestId": null
+        }
+      }
+    },
+    {
+      "id": "aud-1795156556141-90",
+      "createdAt": "2026-11-20T06:35:56.141Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-supervisor",
+      "userName": "Puneethgouda Patil (Supervisor)",
+      "details": "User logged in with role supervisor",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:35:56.141Z"
+    },
+    {
+      "id": "aud-1795156550880-328",
+      "createdAt": "2026-11-20T06:35:50.880Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-admin",
+      "userName": "Mrs. Poornima GJ (Admin)",
+      "details": "User logged in with role admin",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:35:50.880Z"
+    },
+    {
+      "id": "aud-1795156545351-498",
+      "createdAt": "2026-11-20T06:35:45.352Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-supervisor",
+      "userName": "Puneethgouda Patil (Supervisor)",
+      "details": "User logged in with role supervisor",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:35:45.351Z"
+    },
+    {
+      "id": "aud-1795156525596-618",
+      "createdAt": "2026-11-20T06:35:25.596Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-employee",
+      "userName": "Pavan R Bhat (Student/Employee)",
+      "details": "User logged in with role employee",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:35:25.596Z"
+    },
+    {
+      "id": "aud-1795156500418-669",
+      "createdAt": "2026-11-20T06:35:00.418Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-agent-sw",
+      "userName": "Pracheth Kashyap (Software Agent)",
+      "details": "User logged in with role agent",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:35:00.418Z"
+    },
+    {
+      "id": "aud-1795156488245-206",
+      "createdAt": "2026-11-20T06:34:48.245Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-employee",
+      "userName": "Pavan R Bhat (Student/Employee)",
+      "details": "User logged in with role employee",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:34:48.245Z"
+    },
+    {
+      "id": "aud-1795156478125-509",
+      "createdAt": "2026-11-20T06:34:38.125Z",
+      "action": "N8N_WEBHOOK_EMITTED",
+      "userId": "system",
+      "userName": "n8n Workflow Bridge",
+      "details": "Event [ticket_update] prepared for n8n orchestrator",
+      "payload": {
+        "event": "ticket_update",
+        "timestamp": "2026-11-20T06:34:38.125Z",
+        "data": {
+          "userId": "usr-employee",
+          "title": "Ticket TKT-2026-006 Status: RESOLVED",
+          "message": "Pracheth Kashyap (Software Agent) updated your ticket. Resolution remarks: resolved\n",
+          "ticketId": "tic-1794827972403-750",
+          "requestId": null
+        }
+      }
+    },
+    {
+      "id": "aud-1795156478124-859",
+      "createdAt": "2026-11-20T06:34:38.124Z",
+      "action": "TICKET_UPDATED",
+      "userId": "usr-agent-sw",
+      "userName": "Pracheth Kashyap (Software Agent)",
+      "details": "Updated ticket TKT-2026-006 to status 'resolved'",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-11-20T06:34:38.124Z"
+    },
+    {
+      "id": "aud-1795156467892-842",
+      "createdAt": "2026-11-20T06:34:27.892Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-agent-sw",
+      "userName": "Pracheth Kashyap (Software Agent)",
+      "details": "User logged in with role agent",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:34:27.892Z"
+    },
+    {
+      "id": "aud-1795156462398-693",
+      "createdAt": "2026-11-20T06:34:22.398Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-employee",
+      "userName": "Pavan R Bhat (Student/Employee)",
+      "details": "User logged in with role employee",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:34:22.398Z"
+    },
+    {
+      "id": "aud-1795156452578-67",
+      "createdAt": "2026-11-20T06:34:12.578Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-supervisor",
+      "userName": "Puneethgouda Patil (Supervisor)",
+      "details": "User logged in with role supervisor",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:34:12.578Z"
+    },
+    {
+      "id": "aud-1795156430296-221",
+      "createdAt": "2026-11-20T06:33:50.296Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-agent-sw",
+      "userName": "Pracheth Kashyap (Software Agent)",
+      "details": "User logged in with role agent",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:33:50.296Z"
+    },
+    {
+      "id": "aud-1795156416323-360",
+      "createdAt": "2026-11-20T06:33:36.323Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-employee",
+      "userName": "Pavan R Bhat (Student/Employee)",
+      "details": "User logged in with role employee",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:33:36.323Z"
+    },
+    {
+      "id": "aud-1795156411892-476",
+      "createdAt": "2026-11-20T06:33:31.892Z",
+      "action": "N8N_WEBHOOK_EMITTED",
+      "userId": "system",
+      "userName": "n8n Workflow Bridge",
+      "details": "Event [ticket_update] prepared for n8n orchestrator",
+      "payload": {
+        "event": "ticket_update",
+        "timestamp": "2026-11-20T06:33:31.891Z",
+        "data": {
+          "userId": "usr-employee",
+          "title": "Ticket TKT-2026-002 Status: RESOLVED",
+          "message": "Pracheth Kashyap (Software Agent) updated your ticket. Resolution remarks: resolved the core switch port issue\n",
+          "ticketId": "tkt-002",
+          "requestId": null
+        }
+      }
+    },
+    {
+      "id": "aud-1795156411890-736",
+      "createdAt": "2026-11-20T06:33:31.890Z",
+      "action": "TICKET_UPDATED",
+      "userId": "usr-agent-sw",
+      "userName": "Pracheth Kashyap (Software Agent)",
+      "details": "Updated ticket TKT-2026-002 to status 'resolved'",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-11-20T06:33:31.890Z"
+    },
+    {
+      "id": "aud-1795156378269-957",
+      "createdAt": "2026-11-20T06:32:58.269Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-agent-sw",
+      "userName": "Pracheth Kashyap (Software Agent)",
+      "details": "User logged in with role agent",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:32:58.269Z"
+    },
+    {
+      "id": "aud-1795156332885-781",
+      "createdAt": "2026-11-20T06:32:12.885Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-employee",
+      "userName": "Pavan R Bhat (Student/Employee)",
+      "details": "User logged in with role employee",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:32:12.885Z"
+    },
+    {
+      "id": "aud-1795156332811-565",
+      "createdAt": "2026-11-20T06:32:12.811Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-employee",
+      "userName": "Pavan R Bhat (Student/Employee)",
+      "details": "User logged in with role employee",
+      "ip": "::1",
+      "timestamp": "2026-11-20T06:32:12.811Z"
+    },
+    {
+      "id": "aud-1795155837374-221",
+      "createdAt": "2026-11-20T06:23:57.374Z",
+      "action": "SLA_BREACH",
+      "userId": "system",
+      "userName": "SLA Engine",
+      "details": "Ticket TKT-2026-005 BREACHED its SLA limit of 48h",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-11-20T06:23:57.374Z"
+    },
+    {
+      "id": "aud-1795155837373-272",
+      "createdAt": "2026-11-20T06:23:57.373Z",
+      "action": "SLA_BREACH",
+      "userId": "system",
+      "userName": "SLA Engine",
+      "details": "Ticket TKT-2026-003 BREACHED its SLA limit of 48h",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-11-20T06:23:57.373Z"
+    },
+    {
+      "id": "aud-1795155837373-526",
+      "createdAt": "2026-11-20T06:23:57.373Z",
+      "action": "SLA_BREACH",
+      "userId": "system",
+      "userName": "SLA Engine",
+      "details": "Ticket TKT-2026-001 BREACHED its SLA limit of 12h",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-11-20T06:23:57.373Z"
+    },
+    {
+      "id": "aud-1795155837372-923",
+      "createdAt": "2026-11-20T06:23:57.372Z",
+      "action": "SLA_BREACH",
+      "userId": "system",
+      "userName": "SLA Engine",
+      "details": "Ticket TKT-2026-006 BREACHED its SLA limit of 12h",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-11-20T06:23:57.372Z"
+    },
+    {
+      "id": "aud-1794828139682-75",
+      "createdAt": "2026-11-16T11:22:19.682Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-supervisor",
+      "userName": "Puneethgouda Patil (Supervisor)",
+      "details": "User logged in with role supervisor",
+      "ip": "::ffff:127.0.0.1",
+      "timestamp": "2026-11-16T11:22:19.682Z"
+    },
+    {
+      "id": "aud-1794827972407-875",
+      "createdAt": "2026-11-16T11:19:32.407Z",
+      "action": "N8N_WEBHOOK_EMITTED",
+      "userId": "system",
+      "userName": "n8n Workflow Bridge",
+      "details": "Event [ticket_assigned] prepared for n8n orchestrator",
+      "payload": {
+        "event": "ticket_assigned",
+        "timestamp": "2026-11-16T11:19:32.407Z",
+        "data": {
+          "userId": "usr-agent-sw",
+          "title": "New Ticket Assigned: TKT-2026-006",
+          "message": "Pavan R Bhat (Student/Employee) raised ticket \"Campus Wi-Fi drops constantly in ISE Lab 2\" under Campus Network & Infrastructure",
+          "ticketId": "tic-1794827972403-750",
+          "requestId": null
+        }
+      }
+    },
+    {
+      "id": "aud-1794827972406-672",
+      "createdAt": "2026-11-16T11:19:32.406Z",
+      "action": "TICKET_CREATED",
+      "userId": "usr-employee",
+      "userName": "Pavan R Bhat (Student/Employee)",
+      "details": "Created ticket TKT-2026-006 [URGENT]",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-11-16T11:19:32.406Z"
+    },
+    {
+      "id": "aud-1794827787219-139",
+      "createdAt": "2026-11-16T11:16:27.219Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-employee",
+      "userName": "Pavan R Bhat (Student/Employee)",
+      "details": "User logged in with role employee",
+      "ip": "::ffff:127.0.0.1",
+      "timestamp": "2026-11-16T11:16:27.218Z"
+    },
+    {
+      "id": "aud-1794827731505-972",
+      "createdAt": "2026-11-16T11:15:31.505Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-agent-sw",
+      "userName": "Pracheth Kashyap (Software Agent)",
+      "details": "User logged in with role agent",
+      "ip": "::ffff:127.0.0.1",
+      "timestamp": "2026-11-16T11:15:31.505Z"
+    },
+    {
+      "id": "aud-1794827726857-67",
+      "createdAt": "2026-11-16T11:15:26.857Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-employee",
+      "userName": "Pavan R Bhat (Student/Employee)",
+      "details": "User logged in with role employee",
+      "ip": "::ffff:127.0.0.1",
+      "timestamp": "2026-11-16T11:15:26.857Z"
+    },
+    {
+      "id": "aud-1794827726552-458",
+      "createdAt": "2026-11-16T11:15:26.552Z",
+      "action": "USER_LOGIN",
+      "userId": "usr-employee",
+      "userName": "Pavan R Bhat (Student/Employee)",
+      "details": "User logged in with role employee",
+      "ip": "::ffff:127.0.0.1",
+      "timestamp": "2026-11-16T11:15:26.551Z"
+    },
+    {
+      "id": "log-1",
+      "action": "USER_LOGIN",
+      "userId": "usr-admin",
+      "userName": "Mrs. Poornima GJ",
+      "ip": "192.168.1.100",
+      "details": "Administrator logged in successfully",
+      "timestamp": "2026-11-16T09:45:26.589Z"
+    },
+    {
+      "id": "log-2",
+      "action": "SLA_AUTO_ESCALATION",
+      "userId": "system",
+      "userName": "SLA Engine",
+      "ip": "127.0.0.1",
+      "details": "Ticket TKT-2026-002 auto-escalated to supervisor due to SLA breach",
+      "timestamp": "2026-11-16T09:15:26.589Z"
+    },
+    {
+      "id": "log-3",
+      "action": "TICKET_AUTO_ROUTED",
+      "userId": "system",
+      "userName": "Routing Engine",
+      "ip": "127.0.0.1",
+      "details": "Ticket TKT-2026-001 routed to IT Hardware & Facilities based on category hardware",
+      "timestamp": "2026-11-16T05:45:26.589Z"
+    }
+  ]
+}
